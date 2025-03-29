@@ -18,10 +18,10 @@ const router = createRouter({
 })
 router.beforeEach((to, _from, next) => {
   // 设置标题
-  document.title = to.meta.title as string || 'Dimslabs';
+  document.title = to.meta.title as string || 'VueStarter';
   // 设置描述
   const description = document.querySelector('meta[name="description"]');
-  description?.setAttribute('content', to.meta.description as string || 'Dimslabs');
+  description?.setAttribute('content', to.meta.description as string || 'VueStarter');
   next();
 });
 app.use(router)
